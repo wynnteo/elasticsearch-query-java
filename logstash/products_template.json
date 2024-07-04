@@ -1,0 +1,40 @@
+{
+  "index_patterns": ["products_v2"],
+  "mappings": {
+    "properties": {
+      "@timestamp": {
+        "type": "date"
+      },
+      "@version": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "category": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "description": {
+        "type": "text"
+      },
+      "id": {
+        "type": "long"
+      },
+      "name": {
+        "type": "keyword"
+      },
+      "price": {
+        "type": "float"
+      }
+    }
+  }
+}
